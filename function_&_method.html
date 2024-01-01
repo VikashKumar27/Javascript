@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // function - block of code that performs a specific task , can be invoked whenever needed
+
+        // function definition 
+        // method 1 - function without parameter
+        function myfunction(){
+            console.log("welcome to apna college");
+            console.log("Welcome to the world of physics..")
+        }
+        myfunction()
+
+        // function helps to reduce redundancy
+        // function with parameter
+        function myfunction1(msg){
+            console.log(msg)
+        }
+        myfunction1("Vikash Kumar") // Argument
+
+        function add(n1,n2){
+            console.log(n1+n2)
+        }
+        add(10,20)
+
+        function sub(n1,n2){
+            // n1,n2 acts as a local variable - scope
+            // function pararmeter are local varibale- block scope
+            sub1 = n2-n1
+            console.log("before return")
+            return sub1
+            // console.log("After return")
+
+        }
+
+        let val = sub(12,24)
+        console.log(val)
+
+
+        // Arraow function -  compact way of writing a function
+        const functionname = (param1,param2)=>{
+            // do some work
+        }
+
+        const summation=(n1,n2)=>{
+            console.log(n1+n2)
+
+        }
+        summation(20,30)
+
+        let multiplication = (n1,n2)=>{
+            console.log(n1*n2)
+        }
+        multiplication(5,5)
+
+        multiplication = 10
+        console.log(multiplication)
+
+        let hello = ()=>{
+            console.log("Hello world")
+        }
+        hello()
+
+        let world = ()=> console.log("In same line..")
+        world()
+
+
+        // for each loops in arrays
+        let array2 = [1,2,3,4]
+        //array2.foreach
+        // A call back function is a function as an argument to aother function
+        array2.forEach(function printVal(val)
+        {
+            //val - each value at each index
+            console.log(val)
+        })
+
+        array2.forEach((val)=> {
+            console.log(val)
+
+        })
+
+        // array2.forEach((val,idx,array2)=>{
+        //     console.log(val.toUpperCase(),idx);
+        // });
+
+        // Higher order function/ higher order methods
+
+        let nums = [1,2,3,4]
+        nums.forEach((val)=>{
+            console.log(val*val)
+        })
+
+        let calcSquare = (num) =>{
+            console.log("Square is : ",num*num)
+        }
+        
+        nums.forEach(calcSquare);
+
+        console.log("**********************************")
+
+        // map method
+
+        nums.map((val)=>{
+            console.log("map : ",val*val)
+        })
+        
+
+        let newArr = nums.map((val)=>{
+            return val*val
+        })
+
+        console.log("newArray is : ",newArr)
+
+        // filter method
+        let newArr1 = nums.filter((val)=>{
+            return val%2 ==0;
+        })
+        console.log("Even element is : ",newArr1)
+
+        // reduce method
+
+        let array5 = [1,2,3,4]
+
+        let array6 = array5.reduce((res,curr)=>{
+            return res+curr;
+        });
+
+        console.log(array6)
+
+
+
+                                                                                                                                 
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+

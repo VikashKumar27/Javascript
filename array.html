@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let heroes = ["kartik","Modi","salman","King","Ironman"]
+
+        // Array is a type of object . Array contains index and value combination . the value stored in array in linear fashion
+        // in Javascript array is mutable means we can change the the value of array item
+        // in javascript script string is immutable means we cannot change the value of string.
+
+        // iterable(strings, array, objects) -  we can iterate on iterable item
+
+
+
+        console.log(heroes)
+        console.log(typeof heroes)
+        console.log("length of array : ",heroes.length)
+        console.log("**********************")
+        for (let i of heroes){
+            console.log(i)
+        }
+
+        let marks = [1,2,3,4]
+        console.log(marks[1])
+        marks[3] = 60
+        console.log(marks)
+
+        // loop on array
+
+        for (let indx=0;indx<heroes.length;indx++){
+            console.log("values : ",heroes[indx])
+        }
+
+        //for of loop
+        for(let hero of heroes){
+            console.log("hero : ",hero)
+
+        }
+
+        //for in loop
+        console.log("***** for in Loop *****")
+        for(let hero in heroes){
+            console.log("Hero : ",hero)
+        }
+
+        let student_marks = [ 100,200,300,400]
+        let sum =0
+        for(let value of student_marks){
+            sum = sum+value
+        }
+        console.log("total marks of student :",sum)
+        console.log("Average marks of student : ",sum/(student_marks.length))
+        let avg = sum/(student_marks.length)
+        console.log(`Average marks : ${avg}`)
+
+
+        let prices = [250,645,300,900,50]
+        for (let indx =0;indx.length;indx++){
+            prices[indx]= prices[indx]-prices[indx]/10
+        }
+
+        console.log(prices)
+
+        // Arrays method
+        // push - add element to end 
+        // pop() -  delete element from end & return
+        // tostring() - converts array to string
+        prices.push(100000)
+        prices.push(2000000)
+        console.log(prices)
+
+        let deleted_prices= prices.pop()
+        console.log(deleted_prices)
+        console.log(prices.toString())
+
+
+        // unshift method - it is used to store element in starting position
+        // Shift method  - it is used to deleted element from starting postion
+        // Slice method - slice(starting index, end index)
+        let fname = "Vikash Kumar"
+        console.log(fname.slice(0,4))
+
+        console.log(fname)
+
+        console.log(fname.splice(0,4))
+
+
+    </script>
+</body>
+</html>
